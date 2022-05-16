@@ -1,4 +1,4 @@
-# React Autocomplet component
+# React Autocomplete component
 
 A react component which implement an autocomplete selector, with the possibility to navigate between the different category
 
