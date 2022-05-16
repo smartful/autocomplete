@@ -1,0 +1,80 @@
+export const filmsMock = {
+  main: [
+    "Terminator 2",
+    "Robocop",
+    "Dark Knight",
+    "Inception",
+    "Tenet",
+    "Jurrasic Park",
+    "Joker",
+    {
+      "Science fiction": [
+        "Interstellar",
+        "Retour vers le Futur",
+        "Star Wars",
+        { "Cyber punk": ["Blade runner 2049", "Elysium", "Chappie"] },
+        { "Bio punk": ["Alien", "Bienvenue à Gattaca"] },
+      ],
+    },
+    { Aventure: ["Indiana Jones", "Tomb raider", "Pirates des Caraïbes"] },
+    { Action: ["Heat", "Scarface", "300"] },
+  ],
+};
+
+export const flattenFilmsMock = [
+  "Terminator 2",
+  "Robocop",
+  "Dark Knight",
+  "Inception",
+  "Tenet",
+  "Jurrasic Park",
+  "Joker",
+  "Interstellar",
+  "Retour vers le Futur",
+  "Star Wars",
+  "Blade runner 2049",
+  "Elysium",
+  "Chappie",
+  "Alien",
+  "Bienvenue à Gattaca",
+  "Indiana Jones",
+  "Tomb raider",
+  "Pirates des Caraïbes",
+  "Heat",
+  "Scarface",
+  "300",
+];
+
+export const expandedFilmsObjectMock = {
+  main: [
+    "Terminator 2",
+    "Robocop",
+    "Dark Knight",
+    "Inception",
+    "Tenet",
+    "Jurrasic Park",
+    "Joker",
+    {
+      "Science fiction": [
+        "Interstellar",
+        "Retour vers le Futur",
+        "Star Wars",
+        { "Cyber punk": ["Blade runner 2049", "Elysium", "Chappie"] },
+        { "Bio punk": ["Alien", "Bienvenue à Gattaca"] },
+      ],
+    },
+    { Aventure: ["Indiana Jones", "Tomb raider", "Pirates des Caraïbes"] },
+    { Action: ["Heat", "Scarface", "300"] },
+  ],
+  "Science fiction": [
+    "Interstellar",
+    "Retour vers le Futur",
+    "Star Wars",
+    { "Cyber punk": ["Blade runner 2049", "Elysium", "Chappie"] },
+    { "Bio punk": ["Alien", "Bienvenue à Gattaca"] },
+  ],
+  "Cyber punk": ["Blade runner 2049", "Elysium", "Chappie"],
+  "Bio punk": ["Alien", "Bienvenue à Gattaca"],
+  Aventure: ["Indiana Jones", "Tomb raider", "Pirates des Caraïbes"],
+  Action: ["Heat", "Scarface", "300"],
+};
