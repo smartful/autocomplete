@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import PropTypes from "prop-types";
 import { MdNavigateBefore, MdNavigateNext } from "react-icons/md";
 
 import { colors } from "../color";
@@ -19,10 +18,10 @@ const LabelList = ({ labels, handleClick }) => {
 
   useEffect(() => {
     const initiaLabels = labels["main"].filter(
-      (item) => typeof item === "string"
+      (item) => typeof item === "string",
     );
     const initialCategories = labels["main"].filter(
-      (item) => typeof item === "object"
+      (item) => typeof item === "object",
     );
     const parents = createParentCategories(labels);
     const dataExpanded = expandObject(labels);
@@ -41,7 +40,7 @@ const LabelList = ({ labels, handleClick }) => {
     let parents = {};
     Object.keys(items).forEach((category) => {
       const subCategories = items[category].filter(
-        (item) => typeof item === "object"
+        (item) => typeof item === "object",
       );
       if (notEmptyArray(subCategories)) {
         subCategories.forEach((subCategory) => {
@@ -59,10 +58,10 @@ const LabelList = ({ labels, handleClick }) => {
 
   const deployedCategory = (category) => {
     const subCategories = extendedData[category].filter(
-      (item) => typeof item === "object"
+      (item) => typeof item === "object",
     );
     const newLabels = extendedData[category].filter(
-      (item) => typeof item === "string"
+      (item) => typeof item === "string",
     );
     const parentCategory = parentLabels[category];
 
@@ -175,15 +174,6 @@ const LabelList = ({ labels, handleClick }) => {
       </style>
     </div>
   );
-};
-
-LabelList.defaultProps = {
-  labels: {},
-};
-
-LabelList.propTypes = {
-  labels: PropTypes.object,
-  handleClick: PropTypes.func,
 };
 
 export default LabelList;

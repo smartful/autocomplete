@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import PropTypes from "prop-types";
 import { FaEject } from "react-icons/fa";
 import { MdClear } from "react-icons/md";
 
@@ -32,7 +31,7 @@ const Autocomplete = ({ labels, name }) => {
     if (event.target.value.length !== 0) {
       const filteredLabels = wordsWithStartingLetters(
         userInput.get(),
-        flattedLabels
+        flattedLabels,
       );
       filtrated.set(filteredLabels);
       setActiveIndex(0);
@@ -199,14 +198,6 @@ const Autocomplete = ({ labels, name }) => {
       </style>
     </div>
   );
-};
-
-Autocomplete.defaultProps = {
-  labels: [],
-};
-
-Autocomplete.propTypes = {
-  labels: PropTypes.object,
 };
 
 export default Autocomplete;

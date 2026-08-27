@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 import { colors } from "../color";
 
 const LabelList = ({ result, handleClick }) => {
@@ -52,15 +51,6 @@ const LabelList = ({ result, handleClick }) => {
       </style>
     </div>
   );
-};
-
-LabelList.defaultProps = {
-  labels: [],
-};
-
-LabelList.propTypes = {
-  labels: PropTypes.array,
-  handleClick: PropTypes.func,
 };
 
 export default LabelList;
